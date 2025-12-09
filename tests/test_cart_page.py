@@ -24,7 +24,7 @@ def test_unauthorized_user_needs_login_to_buy(browser_setup, prefilled_cart):
 
 @allure.epic('Проверка страницы корзины')
 @allure.feature("Проверка удаления книги")
-@allure.title("Проверка удаления книги без добавления в избранное")
+@allure.title("Удаление книги без добавления в избранное")
 @allure.tag('Регресс', 'WEB', 'Normal')
 @allure.label('WEB')
 @allure.severity('Normal')
@@ -42,7 +42,7 @@ def test_delete_book_from_cart(browser_setup, prefilled_cart):
 
 @allure.epic('Проверка страницы корзины')
 @allure.feature("Проверка удаления книги")
-@allure.title("Проверка удаления книги с добавлением в избранное")
+@allure.title("Удаление книги с добавлением в избранное")
 @allure.tag('Регресс', 'WEB', 'Normal')
 @allure.label('WEB')
 @allure.severity('Normal')
@@ -66,8 +66,8 @@ def test_delete_book_from_cart_and_add_to_favorites(browser_setup, prefilled_car
         favorites_page.book_should_have_author(crime_dostoevsky)
 
 @allure.epic('Проверка страницы корзины')
-@allure.feature("Проверка добавления книги в избранное")
-@allure.title("Проверка добавления книги в избранное без удаления")
+@allure.feature("Проверка добавления книги в \"Отложено\"")
+@allure.title("Добавление книги в \"Отложено\" без удаления")
 @allure.tag('Регресс', 'WEB', 'Normal')
 @allure.label('WEB')
 @allure.severity('Normal')
