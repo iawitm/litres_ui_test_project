@@ -1,6 +1,8 @@
+import allure
 from selene import browser, have
 
 
 class RecommendationPage:
     def page_should_have_text(self):
-        browser.element('[data-testid="pageTitle"]').should(have.text("Рекомендации для вас"))
+        with allure.step("Проверить открытие страницы \"Рекомендации для вас\""):
+            browser.element('[data-testid="pageTitle"]').with_(timeout=15).should(have.text("Рекомендации для вас"))

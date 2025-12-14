@@ -16,6 +16,7 @@ from utils import attach
 def load_env():
     load_dotenv()
 
+
 @pytest.fixture(scope='function')
 def browser_setup():
     browser.config.window_width = 1920
@@ -49,17 +50,13 @@ def browser_setup():
 @pytest.fixture(scope='function')
 def prefilled_favorites(browser_setup):
     book_page = BookPage()
-    with allure.step(f"Открыть страницу книги \"{crime_dostoevsky.title}\""):
-        book_page.open(crime_dostoevsky)
-    with allure.step("Добавить книгу в \"Отложено\""):
-        book_page.add_to_favorites()
+    book_page.open(crime_dostoevsky)
+    book_page.add_to_favorites()
 
 
 @pytest.fixture(scope='function')
 def prefilled_cart(browser_setup):
     book_page = BookPage()
-    with allure.step(f"Открыть страницу книги \"{crime_dostoevsky.title}\""):
-        book_page.open(crime_dostoevsky)
-    with allure.step("Добавить книгу в корзину"):
-        book_page.add_to_cart()
-        book_page.close_dialog()
+    book_page.open(crime_dostoevsky)
+    book_page.add_to_cart()
+    book_page.close_dialog()

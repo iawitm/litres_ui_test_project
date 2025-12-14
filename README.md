@@ -1,25 +1,30 @@
 # Дипломный проект тестирования веб-версии Litres.ru
+
 > [Litres](https://www.litres.ru/)
 
 ![This is an image](/resources/images/readme/litres.png)
 
 ### Список проверок:
+
 - [x] Проверка поиска на главной странице
-  - Поиск существующей книги по ее названию
-  - Поиск несуществующей книги
+    - Поиск существующей книги по ее названию
+    - Поиск несуществующей книги
 - [x] Проверка страницы книги
-  - Добавление книги в \"Отложено\"
-  - Добавление книги в корзину
+    - Добавление книги в \"Отложено\"
+    - Добавление книги в корзину
 - [x] Проверка страницы \"Отложено\"
-  - Удаление книги из \"Отложено\"
-  - Выбор книги из \"Отложено\" ведет на страницу рекомендаций
+    - Удаление книги из \"Отложено\"
+    - Выбор книги из \"Отложено\" ведет на страницу рекомендаций
 - [x] Проверка страницы корзины
-  - Проверка необходимости авторизоваться перед покупкой
-  - Удаление книги без добавления в избранное
-  - Удаление книги с добавлением в избранное
-  - Добавление книги в избранное без удаления
+    - Проверка необходимости авторизоваться перед покупкой
+    - Удаление книги без добавления в избранное
+    - Удаление книги с добавлением в избранное
+    - Добавление книги в избранное без удаления
+
 ----
+
 ### Используемые технологии
+
 <p  align="center">
    <code><img width="5%" title="Python" src="/resources/images/readme/python.png"></code>
    <code><img width="5%" title="PyCharm" src="/resources/images/readme/pycharm.png"></code>
@@ -32,6 +37,7 @@
 </p>
 
 ----
+
 ### Локальный запуск
 
 1. Склонировать репозиторий
@@ -41,14 +47,15 @@
 5. Запустить тесты в командной строке `pytest .`:
 
 ----
+
 ### Удаленный запуск в Jenkins
 
-> <a target="_blank" href="https://jenkins.autotests.cloud/job/iawitm_litres_ui_test_project/">_**Ссылка на сборку в Jenkins**_</a>
+> [Ссылка на сборку в Jenkins](https://jenkins.autotests.cloud/job/iawitm_litres_ui_test_project/")
 
 1. Открыть проект
 2. Выбрать пункт `Build with Parameters`
 3. Указать комментарий для отчета в Telegram
-3. Нажать кнопку `Build`
+4. Нажать кнопку `Build`
 
 ![This is an image](/resources/images/readme/jenkins_build.png)
 
@@ -61,12 +68,17 @@
 ![This is an image](/resources/images/readme/allure_overview.png)
 
 ----
+
 ### Интеграция с Allure TestOps
 
 #### Пример генерации тест-кейсов на основе автотестов
+![This is an image](/resources/images/readme/case_legend.png)
 ![This is an image](/resources/images/readme/testops_cases.png)
 
 ----
+
 ### Оповещение о результатах прогона тестов в Telegram
+
 #### Пример уведомления в Telegram
+
 ![This is an image](/resources/images/readme/tg_notification.png)

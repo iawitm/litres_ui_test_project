@@ -1,3 +1,4 @@
+import allure
 from selene import browser, be, have
 
 from data.books import Book
@@ -5,13 +6,19 @@ from data.books import Book
 
 class MainPage:
     def open(self):
-        browser.open("/")
+        with allure.step("Открыть главную страницу"):
+            browser.open("/")
 
     def search_by_title(self, book: Book):
-        browser.element('[data-testid="search__input"]').should(be.visible).type(book.title).press_enter()
+        with allure.step(f"Искать книгу по названию \"{book.title}\""):
+            (browser.element('[data-testid="search__input"]').with_(timeout=15).should(be.visible).type(book.title)
+             .press_enter())
 
     def book_should_have_title(self, book: Book):
-        browser.element('[data-testid="art__title"]').should(have.text(book.title))
+        with allure.step(f"Проверить наличие названия \"{book.title}\" среди книг"):
+            browser.element('[data-testid="art__title"]').with_(timeout=15).should(have.text(book.title))
 
     def empty_search_result_should_have_text(self):
-        browser.element('[data-testid="search-title__wrapper"]').should(have.text("ничего не найдено"))
+        with allure.step(f"Проверить, что ничего не найдено"):
+            browser.element('[data-testid="search-title__wrapper"]').with_(timeout=15).should(have.text
+                                                                                              ("ничего не найдено"))
