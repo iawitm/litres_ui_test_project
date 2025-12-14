@@ -50,7 +50,7 @@
 
 ### Удаленный запуск в Jenkins
 
-> [Ссылка на сборку в Jenkins](https://jenkins.autotests.cloud/job/iawitm_litres_ui_test_project/")
+> [Ссылка на сборку в Jenkins](https://jenkins.autotests.cloud/job/iawitm_litres_ui_test_project/)
 
 1. Открыть проект
 2. Выбрать пункт `Build with Parameters`
